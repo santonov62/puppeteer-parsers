@@ -1,5 +1,5 @@
 {
-  "name": "puppeteer",
+  "name": "puppeteer-parsers",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/santonov62/puppeteer.git"
+    "url": "git+https://github.com/santonov62/puppeteer-parsers.git"
   },
   "author": "flex62ryz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/santonov62/puppeteer/issues"
+    "url": "https://github.com/santonov62/puppeteer-parsers/issues"
   },
-  "homepage": "https://github.com/santonov62/puppeteer#readme"
+  "homepage": "https://github.com/santonov62/puppeteer-parsers#readme",
+  "dependencies": {
+    "puppeteer": "^2.0.0"
+  }
 }
