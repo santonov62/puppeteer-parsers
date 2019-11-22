@@ -35,29 +35,22 @@ const start = async () => {
     await page.goto(url, {waitUntil: 'networkidle0'});
     log('done');
     
-    // log(`.user-account-inner`);
-    // await page.click('.user-account-inner');
-    // log(`done`);
-    
-    log(`.sign-btn`);
-    // const loginUrl = await page.$eval('.sign-btn', node => node.getAttribute('href'));
-    // await page.$eval('.sign-btn', node => node.click());
+    log(`login`);
+    await login(page);
     log(`done`);
     
-    await login(page);
-    // await page.waitForNavigation();
-    
-    // await page.waitFor('[exp_type="coupon_exposure"]', { visible: true });
-    // await page.$$eval('[exp_type="coupon_exposure"]', (nodes) => {
-    //   nodes.forEach(node => node.click());
-    // })
+    log(`waitForNavigation`);
+    await page.waitForNavigation({waitUntil: 'networkidle0'});
+    log(`done`);
+    log(`clicks`);
     await page.mouse.move(520, 520);
     await page.mouse.move(990, 520);
+    log(`done`);
     
   } catch (e) {
     log(`[start][error]`, e.message);
   } finally {
-    // browser.close();
+    browser.close();
   }
 };
 
