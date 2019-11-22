@@ -31,9 +31,9 @@ const start = async () => {
   try {
     const page = await browser.newPage();
     
-    log(`[goto] `, url);
+    log(`[goto na hui] `, url);
     await page.goto(url, {waitUntil: 'networkidle0'});
-    log('done');
+    log('don gandon');
     
     log(`login`);
     await login(page);
